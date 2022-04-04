@@ -9,4 +9,5 @@ async function bootstrap() {
 
   console.log('Classroom application is running on: http://localhost:3334');
 }
+
 bootstrap();
