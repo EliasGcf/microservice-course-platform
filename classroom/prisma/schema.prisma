@@ -12,4 +12,42 @@ datasource db {
 
 model Student {
   id String @id @default(uuid())
+
+  auth_user_id String? @unique
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  enrollments Enrollment[]
+
+  @@map("students")
+}
+
+model Course {
+  id    String @id @default(uuid())
+  title String
+  slug  String @unique
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  enrolled_on Enrollment[]
+
+  @@map("courses")
+}
+
+model Enrollment {
+  id String @id @default(uuid())
+
+  course_id  String
+  student_id String
+
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @default(now()) @updatedAt
+  canceled_at DateTime?
+
+  course  Course  @relation(fields: [course_id], references: [id])
+  student Student @relation(fields: [student_id], references: [id])
+
+  @@map("enrollments")
 }

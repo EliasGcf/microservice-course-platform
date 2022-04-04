@@ -33,6 +33,7 @@ module.exports = {
           'module',
           '/^@database/',
           '/^@http/',
+          '/^@services/',
           ['parent', 'sibling'],
           'index',
         ],
