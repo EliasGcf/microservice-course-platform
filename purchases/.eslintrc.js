@@ -4,15 +4,8 @@ module.exports = {
     project: 'tsconfig.json',
     sourceType: 'module',
   },
-  plugins: [
-    '@typescript-eslint/eslint-plugin',
-    'import-helpers',
-    'unused-imports',
-  ],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-  ],
+  plugins: ['@typescript-eslint/eslint-plugin', 'import-helpers', 'unused-imports'],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   root: true,
   env: {
     node: true,
@@ -33,6 +26,7 @@ module.exports = {
           'module',
           '/^@database/',
           '/^@http/',
+          '/^@messaging/',
           '/^@services/',
           ['parent', 'sibling'],
           'index',

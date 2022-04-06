@@ -5,8 +5,15 @@ import { DatabaseModule } from '@database/database.module';
 
 import { HttpModule } from '@http/http.module';
 
+import { MessagingModule } from '@messaging/messaging.module';
+
 @Module({
-  imports: [ConfigModule.forRoot(), DatabaseModule, HttpModule],
+  imports: [
+    ConfigModule.forRoot(),
+    DatabaseModule,
+    HttpModule,
+    MessagingModule,
+  ],
   controllers: [],
   providers: [],
 })
