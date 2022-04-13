@@ -3,6 +3,7 @@
   "plugins": ["import-helpers", "unused-imports"],
   "rules": {
     "unused-imports/no-unused-imports": "error",
+    "@next/next/no-img-element": "off",
     "import-helpers/order-imports": [
       "warn",
       {

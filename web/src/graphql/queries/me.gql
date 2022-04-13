@@ -1,5 +1,0 @@
-query Me {
-  me {
-    auth_user_id
-  }
-}
